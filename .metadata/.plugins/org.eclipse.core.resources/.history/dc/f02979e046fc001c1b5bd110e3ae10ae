@@ -1,0 +1,26 @@
+package com.example.ExpenseTracker;
+
+import java.math.BigDecimal;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.example.ExpenseTracker.expense.Expense;
+import com.example.ExpenseTracker.expense.ExpenseRepository;
+
+@SpringBootApplication
+public class ExpenseTrackerApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ExpenseTrackerApplication.class, args);
+	}
+
+	CommandLineRunner commandLineRunner(ExpenseRepository studentRepository) {
+		return args -> {
+			Expense expense = new Expense("Phone", new BigDecimal(1500), "Samsung", 400L);
+			studentRepository.save(expense);
+		};
+	}
+
+}

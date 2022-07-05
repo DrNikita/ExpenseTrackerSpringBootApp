@@ -1,0 +1,7 @@
+package com.example.ExpenseTracker.expense;
+
+public interface ExpenseService {
+
+	public List<Expense> findAll();
+
+}

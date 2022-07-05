@@ -1,0 +1,13 @@
+package com.example.ExpenseTracker.expense;
+
+import java.util.List;
+
+public interface ExpenseService {
+
+	public List<Expense> findAll();
+
+	public void save(Expense expense);
+
+	public Expense findById(Long id);
+
+}

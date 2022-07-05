@@ -1,0 +1,30 @@
+package com.example.ExpenseTracker.expense;
+
+import java.math.BigDecimal;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Entity
+@Table(name = "tbl_expenses")
+@Setter
+@Getter
+@ToString
+@EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
+public class Expense {
+
+	private Long id;
+	private String expenseName;
+	private BigDecimal amount;
+	private String note;
+	private Long createdAt;
+}

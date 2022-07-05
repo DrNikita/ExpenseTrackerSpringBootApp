@@ -1,0 +1,12 @@
+package com.example.ExpenseTracker.expense;
+
+import java.math.BigDecimal;
+
+public class Expense {
+
+	private Long id;
+	private String expenseName;
+	private BigDecimal amount;
+	private String note;
+	private Long createdAt;
+}
